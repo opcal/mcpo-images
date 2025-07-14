@@ -1,0 +1,1 @@
+# MCPO images for OpenAPI-compatible HTTP server
