@@ -1,5 +1,5 @@
 group "default" {
-  targets = ["time-server"]
+  targets = ["time-server", "fetch-server"]
 }
 
 variable "WORKSPACE" {
@@ -17,5 +17,14 @@ target "time-server" {
   platforms = ["linux/amd64","linux/arm64"]
   tags = [
       "${REGISTRY_URL}/opcal/mcpo-time-server:latest"
+    ]
+}
+
+target "fetch-server" {
+  context = "${WORKSPACE}"
+  dockerfile = "fetch/Dockerfile"
+  platforms = ["linux/amd64","linux/arm64"]
+  tags = [
+      "${REGISTRY_URL}/opcal/mcpo-fetch-server:latest"
     ]
 }
