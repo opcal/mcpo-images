@@ -1,4 +1,4 @@
-name: build-ubuntu-images
+name: build-mcpo-images
 
 on:
   workflow_dispatch:
