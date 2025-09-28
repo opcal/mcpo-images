@@ -7,7 +7,10 @@ on:
   push:
     branches: 
       - main
-    # paths:
+    paths:
+      - fetch/**
+      - time/**
+      - .github/workflows/mcpo.yaml
 
 
 jobs:
