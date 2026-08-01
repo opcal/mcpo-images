@@ -18,4 +18,4 @@ if [[ ! -z "${LOCAL_TIMEZONE}" ]]; then
     TIME_OPTION="--local-timezone=${LOCAL_TIMEZONE}"
 fi
 
-uvx --with "mcp<2" mcpo ${MCPO_OPTION} -- uvx mcp-server-time ${TIME_OPTION}
+uvx --with "mcp<2" mcpo ${MCPO_OPTION} -- uvx --with "mcp<2" mcp-server-time ${TIME_OPTION}
