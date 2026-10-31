@@ -18,4 +18,4 @@ if [[ ! -z "${PROXY_URL}" ]]; then
     FETCH_OPTION="--proxy-url=${PROXY_URL}"
 fi
 
-uvx --with "mcp<2" mcpo ${MCPO_OPTION} -- uvx --with "mcp<2" mcp-server-fetch ${FETCH_OPTION}
+uvx --with "mcp<2" --with "fastapi>=0.115.12,<0.145" mcpo ${MCPO_OPTION} -- uvx --with "mcp<2" mcp-server-fetch ${FETCH_OPTION}
